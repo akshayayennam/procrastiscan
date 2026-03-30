@@ -1,0 +1,5 @@
+package com.procrastiscan.repository;
+
+public interface TaskRepository {
+
+}

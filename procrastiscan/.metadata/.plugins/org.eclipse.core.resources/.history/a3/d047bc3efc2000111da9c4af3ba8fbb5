@@ -1,0 +1,5 @@
+package com.procrastiscan.dto;
+
+public class ProductivityTrendResponse {
+
+}

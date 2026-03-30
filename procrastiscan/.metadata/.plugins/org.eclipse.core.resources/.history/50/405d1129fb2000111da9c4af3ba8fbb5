@@ -1,0 +1,40 @@
+package com.procrastiscan.dto;
+
+import java.time.LocalDate;
+
+public class TaskWarningResponse {
+
+    private Long taskId;
+    private String title;
+    private int postponeCount;
+    private LocalDate deadline;
+    private String warning;
+
+    public TaskWarningResponse(Long taskId, String title, int postponeCount, LocalDate deadline, String warning) {
+        this.taskId = taskId;
+        this.title = title;
+        this.postponeCount = postponeCount;
+        this.deadline = deadline;
+        this.warning = warning;
+    }
+
+    public Long getTaskId() {
+        return taskId;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public int getPostponeCount() {
+        return postponeCount;
+    }
+
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public String getWarning() {
+        return warning;
+    }
+}

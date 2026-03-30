@@ -1,0 +1,5 @@
+package com.procrastiscan.model;
+
+public class User {
+
+}

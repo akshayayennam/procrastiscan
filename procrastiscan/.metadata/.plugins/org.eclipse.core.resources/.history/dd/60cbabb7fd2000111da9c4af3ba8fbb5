@@ -1,0 +1,33 @@
+package com.procrastiscan.service;
+
+import java.util.List;
+
+import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
+
+import com.procrastiscan.model.Task;
+import com.procrastiscan.repository.TaskRepository;
+
+@Service
+public class TaskSchedulerService {
+
+    private final TaskRepository taskRepository;
+
+    public TaskSchedulerService(TaskRepository taskRepository) {
+        this.taskRepository = taskRepository;
+    }
+
+    @Scheduled(cron = "0 0 * * * *")
+    public void markOverdueTasks() {
+
+        List<Task> overdueTasks = taskRepository.findOverdueTasksForScheduler();
+
+        for (Task task : overdueTasks) {
+            task.setStatus("OVERDUE");
+        }
+
+        taskRepository.saveAll(overdueTasks);
+
+        System.out.println("Scheduler executed: Overdue tasks updated");
+    }
+}

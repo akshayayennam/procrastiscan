@@ -1,0 +1,5 @@
+package com.procrastiscan.service;
+
+public class UserService {
+
+}

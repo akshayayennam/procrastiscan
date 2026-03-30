@@ -1,0 +1,13 @@
+package com.procrastiscan;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ProcrastiscanApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProcrastiscanApplication.class, args);
+	}
+
+}
